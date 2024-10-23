@@ -12,6 +12,7 @@ h1 {
     text-align: center;
     padding: 2rem 2rem;
 }
+
 /* debug */
 
 form {
@@ -20,4 +21,6 @@ form {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    gap: 1.5rem;
+
 }
