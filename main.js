@@ -42,4 +42,16 @@ paxForm.addEventListener('submit', function (event) {
         discount = (fullRate - discount).toFixed(2);
         console.log(`Apply 40% discount for pax over 65 $ ${discount}`)
     }
+
+    //elemento outputName
+    let outputName = document.querySelector('.outputName');
+    outputName.textContent = name;
+
+    //elemento outputAge
+    let outputAge = document.querySelector('.outputAge');
+    outputAge.textContent = ageOption;
+
+    //elemento ticketRate
+    let rate = document.querySelector('.rate');
+    rate.textContent = discount;
 });
