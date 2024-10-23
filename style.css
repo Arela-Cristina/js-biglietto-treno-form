@@ -15,11 +15,29 @@ h1 {
 
 /* debug */
 
-.display {
+.formDisplay {
     background-color: pink;
     padding: 2rem 2rem;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
 
+}
+
+.outputFormDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+    /* debug */
+    border: 1px solid black;
+    background-color: pink;
+
+}
+
+.elementDisplay {
+    border: 2px solid black;
+    padding: 1rem 1rem;
+    width: 15rem;
+    min-height: 10rem;
 }
