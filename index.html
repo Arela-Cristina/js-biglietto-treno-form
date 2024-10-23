@@ -13,37 +13,39 @@
     <h1>Pronti per il prossimo viaggio!</h1>
 
     <!-- inizio form -->
-    <form id='paxForm' class="formDisplay" action="#" method="post">
+    <form id='paxForm' action="#" method="post">
         <!-- nome -->
-        <div class="formStyle">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+        <div class="formDisplay">
+            <div class="formStyle">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+
+            <!-- eta -->
+            <div class="formStyle">
+                <label for="kmNum">Km</label>
+                <input type="number" id="kmNum" name="km" required>
+            </div>
+
+
+            <!-- dropdown  -->
+            <div class="formStyle">
+                <label for="ageRange">Age Range</label>
+                <select id="age" name="ageRange">
+                    <option value="Adult">Adult</option>
+                    <option value="Minor">Minor</option>
+                    <option value="Over65">Over 65</option>
+                </select>
+            </div>
         </div>
 
-
-        <!-- eta -->
-        <div class="formStyle">
-            <label for="kmNum">Km</label>
-            <input type="number" id="kmNum" name="km" required>
-        </div>
-
-
-        <!-- dropdown  -->
-        <div class="formStyle">
-            <label for="ageRange">Age Range</label>
-            <select id="age" name="ageRange">
-                <option value="Adult">Adult</option>
-                <option value="Minor">Minor</option>
-                <option value="Over65">Over 65</option>
-            </select>
-        </div>
-
-        <div>
+        <div class="formDisplay">
             <!-- bottone submit  -->
-            <input id='submitButton' type="submit" value="Send">
+            <input id='submitButton' class="buttonStyle" type="submit" value="Send">
 
             <!-- bottone cancel -->
-            <button id="cleanForm" type="button">Cancel</button>
+            <button id="cleanForm" class="buttonStyle" type="button">Cancel</button>
         </div>
     </form>
 
