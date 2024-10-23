@@ -21,6 +21,13 @@ h1 {
     border: 1px solid black;
     padding: 1rem 1rem;
     gap: 1rem;
+    min-width: 15rem;
+
+}
+
+.buttonStyle {
+    min-width: 10rem;
+    min-height: 2rem;
 }
 
 .formDisplay {
