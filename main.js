@@ -3,6 +3,9 @@
 //elemento form
 const paxForm = document.getElementById('paxForm');
 
+//element bottone che cancella dati del form
+const cleanForm = document.getElementById('cleanForm');
+
 // //rate to travel (0.21 € by km)
 // const kmRate = 0.21;
 // let fullRate = kmNum * kmRate;
@@ -54,4 +57,38 @@ paxForm.addEventListener('submit', function (event) {
     //elemento ticketRate
     let rate = document.querySelector('.rate');
     rate.textContent = discount;
+
+    //elemento carriage
+    let carriage = document.querySelector('.carriage');
+    carriage.textContent = Math.floor(Math.random() * 5) + 1;
+   
+    //elemento code
+    let code = document.querySelector('.code');
+    code.textContent = Math.floor(Math.random() * 9999) + 1;
+});
+
+//elemento outputName
+let outputName = document.querySelector('.outputName');
+
+//elemento outputAge
+let outputAge = document.querySelector('.outputAge');
+
+//elemento ticketRate
+let rate = document.querySelector('.rate');
+
+//elemento carriage
+let carriage = document.querySelector('.carriage');
+
+//elemento code
+let code = document.querySelector('.code');
+
+//aggiungiamo un evento molto aparte per il bottone che cancella tutti i dati del form 
+
+cleanForm.addEventListener('click', function() {
+    paxForm.reset();  // Resetta il form
+    outputName.textContent = '';
+    outputAge.textContent = '';
+    rate.textContent = '';
+    carriage.textContent = '';
+    code.textContent = '';
 });
