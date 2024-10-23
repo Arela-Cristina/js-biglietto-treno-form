@@ -7,11 +7,16 @@
     font-family: "Playwrite GB S", cursive;
 }
 
+
+h1 {
+    text-align: center;
+    padding: 2rem 2rem;
+}
 /* debug */
 
 form {
     background-color: pink;
-    padding: 1rem 1rem;
+    padding: 2rem 2rem;
     display: flex;
     justify-content: center;
     flex-direction: row;
