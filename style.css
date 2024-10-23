@@ -6,3 +6,13 @@
     box-sizing: border-box;
     font-family: "Playwrite GB S", cursive;
 }
+
+/* debug */
+
+form {
+    background-color: pink;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
