@@ -6,15 +6,24 @@ const paxForm = document.getElementById('paxForm');
 //element bottone che cancella dati del form
 const cleanForm = document.getElementById('cleanForm');
 
-// //rate to travel (0.21 € by km)
-// const kmRate = 0.21;
-// let fullRate = kmNum * kmRate;
+//elenco elementi del DOM output mi serviranno dopo
+//elemento outputName
+let outputName = document.querySelector('.outputName');
+//elemento outputAge
+let outputAge = document.querySelector('.outputAge');
+//elemento ticketRate
+let rate = document.querySelector('.rate');
+//elemento carriage
+let carriage = document.querySelector('.carriage');
+//elemento code
+let code = document.querySelector('.code');
 
 //evento 
 paxForm.addEventListener('submit', function (event) {
     event.preventDefault();
     console.log('click')
     //per ottenere il valore, bisogna averli dopo che si e inviata la informazione, cioe dopo submit
+
     //elemento input
     let name = document.getElementById('name').value;
 
@@ -46,41 +55,23 @@ paxForm.addEventListener('submit', function (event) {
         console.log(`Apply 40% discount for pax over 65 $ ${discount}`)
     }
 
+    //elenco outputForm, cambiamo il InnerHTMl al click del evento
     //elemento outputName
-    let outputName = document.querySelector('.outputName');
     outputName.textContent = name;
 
     //elemento outputAge
-    let outputAge = document.querySelector('.outputAge');
     outputAge.textContent = ageOption;
 
     //elemento ticketRate
-    let rate = document.querySelector('.rate');
     rate.textContent = discount;
 
     //elemento carriage
-    let carriage = document.querySelector('.carriage');
     carriage.textContent = Math.floor(Math.random() * 5) + 1;
    
     //elemento code
-    let code = document.querySelector('.code');
     code.textContent = Math.floor(Math.random() * 9999) + 1;
 });
 
-//elemento outputName
-let outputName = document.querySelector('.outputName');
-
-//elemento outputAge
-let outputAge = document.querySelector('.outputAge');
-
-//elemento ticketRate
-let rate = document.querySelector('.rate');
-
-//elemento carriage
-let carriage = document.querySelector('.carriage');
-
-//elemento code
-let code = document.querySelector('.code');
 
 //aggiungiamo un evento molto aparte per il bottone che cancella tutti i dati del form 
 
