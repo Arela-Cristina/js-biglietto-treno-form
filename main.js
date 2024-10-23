@@ -4,8 +4,8 @@
 const paxForm = document.getElementById('paxForm');
 
 //elemento input
-let name = document.getElementById('name');
-name = name.value;
+let name = document.getElementById('name').value;
+
 
 //elemento km
 let kmNum = document.getElementById('kmNum');
@@ -21,6 +21,9 @@ const kmRate = 0.21;
 let fullRate = kmNum * kmRate;
 
 //evento 
-paxForm.addEventListener('submit', function () {
+paxForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.log('click')
+
 
 })
