@@ -73,7 +73,7 @@ paxForm.addEventListener('submit', function (event) {
 });
 
 
-//aggiungiamo un evento molto aparte per il bottone che cancella tutti i dati del form 
+//aggiungiamo un evento molto aparte per il bottone che cancella tutti i dati del form, non mischiare mai con il evento submit
 
 cleanForm.addEventListener('click', function() {
     paxForm.reset();  // Resetta il form
