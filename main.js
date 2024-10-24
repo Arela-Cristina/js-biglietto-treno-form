@@ -6,6 +6,9 @@ const paxForm = document.getElementById('paxForm');
 //element bottone che cancella dati del form
 const cleanForm = document.getElementById('cleanForm');
 
+//elemento output display
+const outputFormDisplay = document.querySelector('.outputFormDisplay');
+
 //elenco elementi del DOM output mi serviranno dopo
 //elemento outputName
 let outputName = document.querySelector('.outputName');
@@ -23,6 +26,9 @@ paxForm.addEventListener('submit', function (event) {
     event.preventDefault();
     console.log('click')
     //per ottenere il valore, bisogna averli dopo che si e inviata la informazione, cioe dopo submit
+    // aggiungo display quando invio il form
+    outputFormDisplay.style.removeProperty('display');
+    outputFormDisplay.style.display = 'flex';
 
     //elemento input
     let name = document.getElementById('name').value;
@@ -67,7 +73,7 @@ paxForm.addEventListener('submit', function (event) {
 
     //elemento carriage
     carriage.textContent = Math.floor(Math.random() * 5) + 1;
-   
+
     //elemento code
     code.textContent = Math.floor(Math.random() * 9999) + 1;
 });
@@ -75,11 +81,14 @@ paxForm.addEventListener('submit', function (event) {
 
 //aggiungiamo un evento molto aparte per il bottone che cancella tutti i dati del form, non mischiare mai con il evento submit
 
-cleanForm.addEventListener('click', function() {
+cleanForm.addEventListener('click', function () {
     paxForm.reset();  // Resetta il form
     outputName.textContent = '';
     outputAge.textContent = '';
     rate.textContent = '';
     carriage.textContent = '';
     code.textContent = '';
+    // tolgo display al aclick del bottone cancel
+    outputFormDisplay.style.removeProperty('display');
+    outputFormDisplay.style.display = 'none';
 });
